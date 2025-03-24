@@ -14,3 +14,4 @@ try{
 }catch (PDOException $e){
     die("Falha na conexão: ". $e->getMessage());
 }
+?>
