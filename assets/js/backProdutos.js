@@ -34,5 +34,20 @@ function pesquisaProdutos(){
             tamanhoProds.push(data[i].tamanhoProd);
             fotoProds.push(data[i].fotoProd);
         }
+        //estrutura para montar os cards na tela
+        for(var j=1;j<idsProds.length;j=j+4){
+            var id = idsProds[j];
+            var desc = descProds[j];
+            var tamanho = tamanhoProds[j];
+            var preco = precoProds[j];
+            var foto = fotoProds[j];
+            var categoria = categoriaProds[j];
+            //cria uma div para o produto
+            var cardProd = 
+            document.createElement('div');
+            cardProd.setAttribute('class', 'product-item');
+            cardProd.innerHTML = '<a href="./product.html?idProd='+id+'">'+ '<div class="product-photo">'+  '<img src="./assets/images/products/'+foto+'"/>'+'</div>'+
+            //terminar de montar o card
+        }
     })
 }
